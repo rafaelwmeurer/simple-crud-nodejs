@@ -1,0 +1,19 @@
+
+version: '3.3'
+
+services: 
+  api: 
+    image: simplescrud-backend:1.0
+    build:
+      context: src/.
+      dockerfile: Dockerfile
+    networks: 
+      - localdb      
+    ports:
+      - "8080:8080"
+    environment: 
+      MONGODB_URI: mongodb://mongouser:mongopwd@mongodb:27017/admin
+
+networks: 
+  localdb: 
+    driver: bridge   

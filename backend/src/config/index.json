@@ -1,0 +1,4 @@
+{
+    "porta": "8080",
+    "mongodburl": "mongodb://mongouser:mongopwd@localhost:27017/admin"
+}

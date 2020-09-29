@@ -1,0 +1,10 @@
+DATABASE
+cd mongodb
+docker-compose up -d
+
+APLICACAO
+compilar o projeto
+docker build --tag simplecrud:1.0 .
+
+gerando a imagem, deleta o container que está executando e cria um novo
+docker run --publish 8080:8080 --detach --name simplecrud simplecrud:1.0
